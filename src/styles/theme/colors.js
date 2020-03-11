@@ -14,6 +14,7 @@ export const background = {
 
 export const text = {
   primary: _oxfordBlue,
+  secondary: _white,
   placeholder: _colorGrey61,
   error: _flamingo,
   success: _malachite
@@ -26,5 +27,5 @@ export const border = {
 
 export const button = {
   active: _royalBlue,
-  disabled: _governorBay,
+  hover: _governorBay,
 }
