@@ -1,11 +1,10 @@
 import React from 'react'
-import Select from 'react-select'
 
-export const SelectField = ({
+export const TextField = ({
   input,
   label,
-  options,
   placeholder,
+  type,
   meta: { touched, error }
 }) => (
     <div>
@@ -14,12 +13,10 @@ export const SelectField = ({
         {label}
       </label>
       <div error={error}>
-        <Select
+        <input
           {...input}
-          options={options}
+          type={type}
           placeholder={placeholder}
-          value={input.value}
-          onBlur={() => input.onBlur(input.value)}
         />
         {touched && error && <span>{error}</span>}
       </div>
