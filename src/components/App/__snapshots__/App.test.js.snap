@@ -184,11 +184,88 @@ exports[`renders app Snapshot 1`] = `
     className="emotion-10"
     onSubmit={[Function]}
   >
+    <h3>
+      Contact form
+    </h3>
     <div>
       <label>
+        <span>
+          * 
+        </span>
+        Social security number
+      </label>
+      <div
+        error="Required"
+      >
+        <input
+          name="ssn"
+          onBlur={[Function]}
+          onChange={[Function]}
+          onDragStart={[Function]}
+          onDrop={[Function]}
+          onFocus={[Function]}
+          placeholder="Type in your social security number"
+          type="text"
+          value=""
+        />
+      </div>
+    </div>
+    <div>
+      <label>
+        <span>
+          * 
+        </span>
+        Phone number
+      </label>
+      <div
+        error="Required"
+      >
+        <input
+          name="phone"
+          onBlur={[Function]}
+          onChange={[Function]}
+          onDragStart={[Function]}
+          onDrop={[Function]}
+          onFocus={[Function]}
+          placeholder="Type in your number"
+          type="phone"
+          value=""
+        />
+      </div>
+    </div>
+    <div>
+      <label>
+        <span>
+          * 
+        </span>
+        Email address
+      </label>
+      <div
+        error="Required"
+      >
+        <input
+          name="email"
+          onBlur={[Function]}
+          onChange={[Function]}
+          onDragStart={[Function]}
+          onDrop={[Function]}
+          onFocus={[Function]}
+          placeholder="Type in your email"
+          type="email"
+          value=""
+        />
+      </div>
+    </div>
+    <div>
+      <label>
+        <span>
+          * 
+        </span>
         Country
       </label>
-      <div>
+      <div
+        error="Required"
+      >
         <div
           className=" emotion-8"
           onKeyDown={[Function]}
@@ -291,11 +368,23 @@ exports[`renders app Snapshot 1`] = `
               </div>
             </div>
           </div>
+          <input
+            name="countries"
+            type="hidden"
+            value=""
+          />
         </div>
       </div>
     </div>
+    <p>
+      <span>
+        *
+      </span>
+       All fields are mandatory
+    </p>
     <button
       className="emotion-9"
+      disabled={true}
       type="submit"
     >
       Submit

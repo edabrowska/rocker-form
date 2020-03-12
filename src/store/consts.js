@@ -1,1 +1,4 @@
 export const GET_COUNTRIES = 'GET_COUNTRIES'
+export const GET_FORM_DATA = 'GET_FORM_DATA'
+export const SAVE_FORM_DATA = 'SAVE_FORM_DATA'
+export const DELETE_FORM_DATA = 'DELETE_FORM_DATA'

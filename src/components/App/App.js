@@ -9,7 +9,7 @@ import theme from '../../styles/theme/theme'
 
 import { Root } from './App.shards'
 
-import Form from '../Form/Form'
+import FormContainer from '../Form/FormContainer'
 
 function App() {
   return (
@@ -17,7 +17,7 @@ function App() {
       <Global styles={globalStyles} />
       <ThemeProvider theme={theme}>
         <Root>
-          <Form />
+          <FormContainer />
         </Root>
       </ThemeProvider>
     </Provider>

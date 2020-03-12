@@ -1,6 +1,5 @@
-import React, { useEffect } from 'react'
+import React from 'react'
 import { reduxForm, Field } from 'redux-form'
-import { connect } from 'react-redux'
 
 import { FormRoot, Button } from './Form.shards'
 import {
@@ -14,20 +13,9 @@ import {
 import { TextField } from '../TextField/TextField'
 import { SelectField } from '../SelectField/SelectField'
 
-import { getCountries } from '../../store/actions/index'
-
 const Form = props => {
-  const { countries, getCountries, pristine, invalid, submitting } = props
+  const { countries, invalid, submitting, handleSubmit } = props
 
-  useEffect(() => {
-    getCountries()
-  }, [])
-
-  const handleSubmit = values => {
-
-    console.log('Success', values)
-  }
-  console.log(props)
   return <FormRoot onSubmit={handleSubmit}>
     <h3>Contact form</h3>
     <Field
@@ -60,29 +48,21 @@ const Form = props => {
       label='Country'
       placeholder='Select your country'
       options={countries}
-      validate={[required]}
+      validate={required}
     />
     <p><span>*</span> All fields are mandatory</p>
     <Button
       type='submit'
-      disabled={pristine || invalid || submitting}
+      disabled={invalid || submitting}
     >
       Submit
     </Button>
   </FormRoot>
 }
 
-const ConnectedForm = connect(
-  state => ({
-    countries: state.countriesField.countries
-  }),
-  dispatch => ({
-    getCountries: () => dispatch(getCountries())
-  })
-)(Form)
-
 const ContactForm = reduxForm({
   form: 'contact',
-})(ConnectedForm)
+  enableReinitialize: true
+})(Form)
 
 export default ContactForm

@@ -1,4 +1,9 @@
-import { GET_COUNTRIES } from '../consts'
+import { GET_COUNTRIES, GET_FORM_DATA, DELETE_FORM_DATA } from '../consts'
+
+import {
+  getFromLocalStorage,
+  removeFromLocalStorage
+} from '../../utils/localStorage'
 
 const allCountries = 'https://restcountries.eu/rest/v2/all'
 
@@ -16,5 +21,19 @@ export const getCountries = () => {
         }, [])
         dispatch({ type: GET_COUNTRIES, payload: countriesOption })
       })
+  }
+}
+
+export const getFormData = () => {
+  return {
+    type: GET_FORM_DATA,
+    payload: getFromLocalStorage()
+  }
+}
+
+export const deleteFormData = () => {
+  return {
+    type: DELETE_FORM_DATA,
+    payload: removeFromLocalStorage()
   }
 }
