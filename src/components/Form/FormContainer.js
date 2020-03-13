@@ -2,7 +2,7 @@ import React, { useEffect } from 'react'
 import { connect } from 'react-redux'
 
 import Form from './Form'
-import { saveToLocalStorage } from '../../utils/localStorage'
+import { saveFormToLS } from '../../utils/localStorage'
 
 import {
   getCountries,
@@ -32,7 +32,7 @@ const FormContainer = props => {
 
   return <Form
     onSubmit={printSuccess}
-    onChange={saveToLocalStorage}
+    onChange={saveFormToLS}
     countries={countries}
     initialValues={initialValues}
   />
