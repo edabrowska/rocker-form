@@ -27,6 +27,22 @@ const base = css`
   p, ul, li {
     margin: 0;
   }
+
+  input:-webkit-autofill,
+  input:-webkit-autofill:hover,
+  input:-webkit-autofill:focus,
+  input:-internal-autofill-selected,
+  input:-internal-autofill-previewed,
+  textarea:-webkit-autofill,
+  textarea:-webkit-autofill:hover,
+  textarea:-webkit-autofill:focus,
+  select:-webkit-autofill,
+  select:-webkit-autofill:hover,
+  select:-webkit-autofill:focus {
+    -webkit-text-fill-color: ${text.primary};
+    font-size: 1.6rem !important;
+    -webkit-box-shadow: 0 0 0 50px white inset;
+  }
 `
 
 export default css`

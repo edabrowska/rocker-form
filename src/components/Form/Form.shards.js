@@ -23,3 +23,18 @@ export const Button = styled.button`
     cursor: default;
   }
 `
+export const InputRoot = styled.div`
+  margin: 20px 0;
+`
+
+export const InputWrapper = styled.div`
+  position: relative;
+  margin-top: 10px;
+`
+
+export const ErrorMsg = styled.span`
+  position: absolute;
+  bottom: -15px;
+  left: 10px;
+  font-size: 1.2rem;
+`

@@ -1,6 +1,6 @@
 const _white = '#FFF'
 const _colorGrey61 = '#979c9f'
-const _colorGrey92 = '#ebebeb'
+const _colorGrey80 = '#cccccc'
 
 const _oxfordBlue = '#354052'
 const _royalBlue = '#443df1'
@@ -17,12 +17,12 @@ export const text = {
   secondary: _white,
   placeholder: _colorGrey61,
   error: _flamingo,
-  success: _malachite
 }
 
 export const border = {
-  input: _colorGrey92,
-  transparent: 'transparent',
+  input: _colorGrey80,
+  success: _malachite,
+  error: _flamingo,
 }
 
 export const button = {

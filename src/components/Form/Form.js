@@ -12,6 +12,7 @@ import {
 
 import { TextField } from '../TextField/TextField'
 import { SelectField } from '../SelectField/SelectField'
+import { Label } from '../Label/Label'
 
 const Form = props => {
   const { countries, invalid, submitting, handleSubmit } = props
@@ -50,7 +51,10 @@ const Form = props => {
       options={countries}
       validate={required}
     />
-    <p><span>*</span> All fields are mandatory</p>
+    <Label
+      label='All fields are mandatory'
+      smaller
+    />
     <Button
       type='submit'
       disabled={invalid || submitting}
