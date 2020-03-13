@@ -1,7 +1,8 @@
 To run build you may serve it with a static server:
-
   - yarn global add serve
   - serve -s build
+
+Or you can visit: https://edabrowskaramm.github.io/rocker-form/index.html
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
