@@ -6,7 +6,7 @@ import {
   saveCountriesToLS
 } from '../../utils/localStorage'
 
-const allCountries = 'https://restcountries.eu/rest/v3.1/all'
+const allCountries = 'https://restcountries.com/v3.1/all'
 
 export const getCountries = () => {
   return function (dispatch) {
